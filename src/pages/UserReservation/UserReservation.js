@@ -27,7 +27,7 @@ function UserReservation(props) {
       Email: Email,
     };
     axiosJWT
-      .post("https://localhost:7040/api/UserReservation/Reservation", state, {
+      .post(`${process.env.REACT_APP_URL}/api/UserReservation/Reservation`, state, {
         headers: {
           authorization: "Bearer " + localStorage.getItem('Token')
         }

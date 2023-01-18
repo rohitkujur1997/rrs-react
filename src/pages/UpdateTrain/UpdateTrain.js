@@ -24,7 +24,7 @@ export default function Updatetrain(props) {
     const navigate = new useNavigate();
 
     useEffect(() => {
-        axios.get(`https://localhost:7040/api/TrainInfo/${localStorage.getItem('TrainNumber')}`)
+        axios.get(`${process.env.REACT_APP_URL}/api/TrainInfo/${localStorage.getItem('TrainNumber')}`)
             .then(function (response) {
                 setOrigin(response.data.origin);
                 setDestination(response.data.destination);
@@ -61,7 +61,7 @@ export default function Updatetrain(props) {
         };
         //console.log(Data);
 
-        axiosJWT.put(`https://localhost:7040/api/TrainInfo/UpdateTrain`, Data, {
+        axiosJWT.put(`${process.env.REACT_APP_URL}/api/TrainInfo/UpdateTrain`, Data, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }

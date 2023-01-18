@@ -6,7 +6,7 @@ function ViewTicket(props) {
 
   const axiosJWT = axios.create();
   useEffect(() => {
-    axiosJWT.get(`https://localhost:7040/api/UserReservation/viewticketbypnr/${props.pnr}`, {
+    axiosJWT.get(`${process.env.REACT_APP_URL}/api/UserReservation/viewticketbypnr/${props.pnr}`, {
       headers: {
         authorization: "Bearer " + localStorage.getItem('Token')
       }

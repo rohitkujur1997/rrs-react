@@ -24,7 +24,7 @@ function BookTicket() {
 
     const axiosJWT = axios.create();
     useEffect(() => {
-        axiosJWT.get("https://localhost:7040/api/TrainInfo/GetOrigin", {
+        axiosJWT.get(`${process.env.REACT_APP_URL}/api/TrainInfo/GetOrigin`, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }
@@ -42,7 +42,7 @@ function BookTicket() {
         console.log(getOriginvalue);
         setOriginvalue(getOriginvalue);
         e.preventDefault();
-        await axiosJWT.get(`https://localhost:7040/api/TrainInfo/GetDestination/${getOriginvalue}`, {
+        await axiosJWT.get(`${process.env.REACT_APP_URL}/api/TrainInfo/GetDestination/${getOriginvalue}`, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }
@@ -84,7 +84,7 @@ function BookTicket() {
     async function searchtrainfun() {
         setSearchtrain(true);
         console.log(Departure);
-        await axiosJWT.get(`https://localhost:7040/api/TrainInfo/GetTrainOriginDestinationDeparture/${Originvalue}/${Destinationvalue}/${Departure}`, {
+        await axiosJWT.get(`${process.env.REACT_APP_URL}/api/TrainInfo/GetTrainOriginDestinationDeparture/${Originvalue}/${Destinationvalue}/${Departure}`, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }

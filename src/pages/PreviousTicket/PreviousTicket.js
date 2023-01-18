@@ -16,7 +16,7 @@ const PreviousTicket = () => {
     const axiosJWT = axios.create();
     useEffect(() => {
         setTimeout(() => {
-            axiosJWT.get(`https://localhost:7040/api/UserReservation/userticket/${localStorage.getItem('UserName')}`, {
+            axiosJWT.get(`${process.env.REACT_APP_URL}/api/UserReservation/userticket/${localStorage.getItem('UserName')}`, {
                 headers: {
                     authorization: "Bearer " + localStorage.getItem('Token')
                 }
@@ -30,7 +30,7 @@ const PreviousTicket = () => {
     }, [data]);
     const can = (pnr) => {
         console.log(pnr);
-        axiosJWT.delete("https://localhost:7040/api/UserReservation/cancelticket/" + pnr, {
+        axiosJWT.delete(`${process.env.REACT_APP_URL}/api/UserReservation/cancelticket/` + pnr, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }
@@ -42,7 +42,7 @@ const PreviousTicket = () => {
             });
     }
     const eTicket=(p)=>{
-        axiosJWT.get("https://localhost:7040/api/UserReservation/GeteTicket/" + p, {
+        axiosJWT.get(`${process.env.REACT_APP_URL}/api/UserReservation/GeteTicket/` + p, {
             headers: {
                 authorization: "Bearer " + localStorage.getItem('Token')
             }

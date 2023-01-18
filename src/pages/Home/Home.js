@@ -82,7 +82,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      Axios.get("https://localhost:7040/api/TrainInfo").then((result) =>
+      Axios.get(`${process.env.REACT_APP_URL}/api/TrainInfo`).then((result) =>
         setData(result.data)
       );
     }, 1000);

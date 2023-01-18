@@ -20,7 +20,7 @@ const Adminops = () => {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get("https://localhost:7040/api/TrainInfo")
+        .get(`${process.env.REACT_APP_URL}/api/TrainInfo`)
         .then((result) => setData(result.data));
       //console.log(data[0]);
     }, 1000);
@@ -30,7 +30,7 @@ const Adminops = () => {
   }
 
   const del = (dl) => {
-    axiosJWT.delete("https://localhost:7040/api/TrainInfo/DeleteTrain/" + dl, {
+    axiosJWT.delete(`${process.env.REACT_APP_URL}/api/TrainInfo/DeleteTrain/` + dl, {
       headers: {
         authorization: "Bearer " + localStorage.getItem('Token')
       }

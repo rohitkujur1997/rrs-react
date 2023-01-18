@@ -8,7 +8,7 @@ function UserReservationTicket() {
   const [Data, setData] = useState([])
 
   useEffect(() => {
-    axios.get(`https://localhost:7040/api/UserReservation/viewticketdetails/${localStorage.getItem('UserName')}`)
+    axios.get(`${process.env.REACT_APP_URL}/api/UserReservation/viewticketdetails/${localStorage.getItem('UserName')}`)
       .then(function (response) {
         console.log(response)
         setData(response.data[0])

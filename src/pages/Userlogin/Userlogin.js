@@ -18,7 +18,7 @@ const Userlogin = (props) =>{
             "UserName": UserName,
             "Password": Password
         };
-        axios.post("https://localhost:7040/api/UserRegistration/login", out)
+        axios.post(`${process.env.REACT_APP_URL}/api/UserRegistration/login`, out)
         .then((response) => {
             if(response.status===200){
                 localStorage.setItem("Token",response.data);

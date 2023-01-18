@@ -19,7 +19,7 @@ const Adminlogin = (props) => {
             "AdminName": AdminName,
             "Password": Password
         };
-        axios.post("https://localhost:7040/api/Admin/login", out)
+        axios.post(`${process.env.REACT_APP_URL}/api/Admin/login`, out)
             .then((response) => {
                 if (response.status === 200) {
                     localStorage.setItem("Token", response.data);

@@ -30,7 +30,7 @@ export default function UserRegistration(props) {
             setShowerror("Password not match");
         }
         else {
-            axios.post('https://localhost:7040/api/UserRegistration/register', out)
+            axios.post(`${process.env.REACT_APP_URL}/api/UserRegistration/register`, out)
                 .then(function (response) {
 
                     console.log(response);

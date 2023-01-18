@@ -46,7 +46,7 @@ function InsertTrain(props) {
       "SleeperCost": SleeperCost
     };
     console.log(out);
-    axiosJWT.post('https://localhost:7040/api/TrainInfo/InsertTrain', out, {
+    axiosJWT.post(`${process.env.REACT_APP_URL}/api/TrainInfo/InsertTrain`, out, {
       headers: {
         authorization: "Bearer " + localStorage.getItem('Token')
       }
