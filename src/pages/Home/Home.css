@@ -1,0 +1,53 @@
+table {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 200px;
+    width: 100%;
+    height: 100%
+}
+
+row {
+    width: 100%;
+    height: 500px;
+}
+
+th,
+td {
+    color: white;
+}
+
+.img {
+    border-radius: 50%;
+    height: 1px;
+    width: 1px;
+}
+
+.reg {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.btn {
+    background-color: #271396;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+/* .Userform{
+    background-color: azure;
+    margin: 0 auto;
+    max-height: 800px;
+    max-width: 500px;
+    text-align: left;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+} */

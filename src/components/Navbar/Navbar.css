@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff; /* fallback for old browsers */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+i{
+  margin-right: 10px;
+}
+.navbar{
+  display: flex;
+  background-color: black;
+  height: 75px;
+}
+.navlink{
+  text-decoration: none;
+  font-size: large;
+  font-weight: 400;
+  padding: 20px;
+  color: rgb(170, 170, 170);
+}
+.active{
+  color: white;
+  font-weight: 600;
+}

@@ -1,0 +1,38 @@
+
+.btn{
+    background-color: #271396;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  .lbtn{
+    background-color: rgb(228, 3, 3);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  .insertbtn{
+    text-align: center;
+  }
+  .logoutbtn{
+    text-align: right;
+  }
+.head{
+  color: white;
+}
+  

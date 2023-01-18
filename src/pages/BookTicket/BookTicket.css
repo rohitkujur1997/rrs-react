@@ -1,0 +1,35 @@
+.float-parent-element { 
+    display: flex; 
+} 
+.float-child-element { 
+    flex: 50%;
+    text-align: center;
+}
+
+.containerdetail{
+    
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.train-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.boxes{
+    width: calc(100% / 2 - 20px);
+}
+.details{
+}
+.button{
+    text-align: right;
+}
