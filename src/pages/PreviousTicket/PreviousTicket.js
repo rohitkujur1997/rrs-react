@@ -86,6 +86,7 @@ const PreviousTicket = () => {
                             <th scope="col">NumberOfTickets</th>
                             <th scope="col">Payment</th>
                             <th scope="col">TravelClass</th>
+                            <th scope="col">TravelQuota</th>
                             <th scope="col">Email</th>
                             <th scope="col">View Ticket</th>
                             <th scope="col">Send eTicket</th>
@@ -102,6 +103,7 @@ const PreviousTicket = () => {
                                     <td>{item.numberOfTickets}</td>
                                     <td>{item.payment}</td>
                                     <td>{item.class.toUpperCase()}</td>
+                                    <td>{item.quota}</td>
                                     <td>{item.email}</td>
                                     <td><button className='btn' onClick={() => { setPnr(item.pnr); setViewTicketPopup(true) }}>View Ticket</button>
                                         <Popup trigger={ViewTicketPopup} setTrigger={setViewTicketPopup}>

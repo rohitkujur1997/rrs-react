@@ -26,7 +26,8 @@ function ViewTicket(props) {
       <h5>UserName: {Data.userName}</h5>
       <h5>NumberOfTickets: {Data.numberOfTickets}</h5>
       <h5>Payment: {Data.payment}</h5>
-      <h5>TravelClass: {Data.travelClass}</h5>
+      <h5>TravelClass: {Data.class}</h5>
+      <h5>TravelQuota: {Data.quota}</h5>
       <h5>Email: {Data.email}</h5>
       <br />
     </form>
